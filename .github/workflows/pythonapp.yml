@@ -20,9 +20,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python setup.py bdist_wheel -d TARGET
+        pip install -r wheel
         pip install -r requirements.txt
-        pip install wheel
     - name: Lint with flake8
       run: |
         pip install flake8
