@@ -42,7 +42,7 @@ class char():
 #Setup#
 setup = False
 while setup == False:
-    print('Welcome to Cubicle Countdown Remastered, which follows the story of an office employee at Cre-8 Incorporated, living in the shining corporate capital of Brasília.')
+    print('Welcome to Cubicle Countdown Remastered, which follows the story of an office employee at Cre-8 Incorporated, living in the shining corporate capital of Brasilia.')
     nameBool = False
     while nameBool == False:
         char.name = input('What is your name?\n--\n').capitalize()
