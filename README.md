@@ -1,2 +1,2 @@
 # Cubicle-Countdown-Remastered
-ur mom gae
+This is a game that I am making.
