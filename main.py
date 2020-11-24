@@ -1,7 +1,6 @@
 import random
 import time
 
-
 class char():
     name = None
     pronouns = []
@@ -12,8 +11,6 @@ class char():
     statPoints = 27
     stats = [['STR', 8], ['DEX', 8], ['CON', 8], ['INT', 8], ['WIS', 8], ['CHA', 8]]
 
-    skillPoints = 12
-    skills = [['Athletics']]
 
     def modOf(self, stat):
         return round((stat-10.1)/2)
@@ -39,6 +36,13 @@ class char():
                 modText = str(mod)
             print(s[0] + ': ' + str(s[1]) + ' (' + modText + ')')
         print('--')
+    def levelUp(self):
+        if char.xp >= (char.lvl*char.lvl*100):
+            print("1")
+            char.xp -= (char.lvl*char.lvl*100)
+            print("2")
+            char.lvl += 1
+            print("--\nCongratulations!  You have leveled up!  Welcome to level " + str(char.lvl) + "!")
 
 #Setup#
 setup = False
@@ -90,8 +94,8 @@ while setup == False:
                 num = char.stats[(int(answer)-1)]
                 answer2 = input('You have selected ' + num[0] + '.  How many points would you like to add or subtract?\n--\n')
                 if answer2.isnumeric() or (answer2[0] == '-' and answer2[1:].isnumeric()):
-                    if num[1] + int(answer2) > 20 or num[1] + int(answer2) < 0:
-                        input('Stats may not be greater than 20 or less than 7.')
+                    if num[1] + int(answer2) > 18 or num[1] + int(answer2) < 0:
+                        input('Stats may not be greater than 18 or less than 7.')
                     elif int(answer2) > char.statPoints:
                         input('You can\'t spend more points than you have!')
                     else:
@@ -105,3 +109,4 @@ while setup == False:
             input('Invalid Input!')
 
     char.printSheet(char)
+
