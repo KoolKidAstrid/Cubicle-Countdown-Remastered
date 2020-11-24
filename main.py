@@ -1,6 +1,7 @@
 import random
 import time
 
+
 class char():
     name = None
     pronouns = []
